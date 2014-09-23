@@ -12,3 +12,39 @@ When all of one player's ships have been hit the game finishes and the player wh
 
 CRC Cards
 ---------
+
+SHIP
+it should:
+- have a size
+- be able to be placed by a player
+- be able to be hit
+- be able to know when it's been hit
+- be able to know how many times it's been hit
+- be able to know when it's sunk
+
+it interacts with:
+- Player
+- Board/Grid
+
+GRID
+it should:
+- be made up of squares
+- know when a square is already occupied
+- know by what kind of ship it is occupied
+- keep track of hits and misses
+- not allow the same square to be hit twice
+
+it interacts with:
+- Player
+- Board/Grid
+
+PLAYER
+it should:
+- have a board
+- have ships
+- place ships
+- select a square to hit
+
+it interacts with:
+- Ship
+- Board/Grid
