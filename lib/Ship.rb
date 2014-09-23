@@ -1,23 +1,26 @@
 class Ship
+
+	SIZES = {
+		aircraft_carrier: 5, 
+		battleship: 4,
+		submarine: 3,
+		destroyer: 3,
+		patrol_boat: 2
+	}
+
+	attr_reader :name, :size
 	
-	def initialize(size)
-		raise "RuntimeError" if @size > 5
-		raise "RuntimeError" if @size < 2
-		@size = size
+	def initialize(name)
+		@size = SIZES[name]
+		@name = name
 	end
 
-	def size
-		@size
+	def self.type(name)
+		new(normalize(name))
 	end
 
-	def name
-		@name
+	def self.normalize(name)
+		name.downcase.gsub(' ', '_').to_sym
 	end
-
-	def self.type(size)
-		@name = :Battleship if size == 4
-		super
-	end
-
 end
 
