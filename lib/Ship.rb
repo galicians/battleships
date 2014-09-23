@@ -15,12 +15,40 @@ class Ship
 		@name = name
 	end
 
-	def self.type(name)
-		new(normalize(name))
-	end
 
-	def self.normalize(name)
-		name.downcase.gsub(' ', '_').to_sym
+end
+
+class Submarine < Ship
+	def initialize
+		super(:submarine)
 	end
 end
+
+class AircraftCarrier < Ship
+	def initialize
+		super(:aircraft_carrier)
+	end
+end
+
+class Battleship < Ship
+	def initialize
+		super(:battleship)
+	end
+end
+
+class Destroyer < Ship
+	def initialize
+		super(:destroyer)
+	end
+end
+
+class PatrolBoat
+	def initialize
+		super(:patrol_boat)
+	end
+end
+
+
+
+
 
