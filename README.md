@@ -21,11 +21,12 @@ it should:
 - be able to know when it's been hit
 - be able to know how many times it's been hit
 - be able to know when it's sunk
-it interacts with
+
+it interacts with:
 - Player
 - Board/Grid
 
-BOARD
+GRID
 it should:
 - be made up of squares
 - know when a square is already occupied
@@ -33,9 +34,17 @@ it should:
 - keep track of hits and misses
 - not allow the same square to be hit twice
 
+it interacts with:
+- Player
+- Board/Grid
+
 PLAYER
 it should:
 - have a board
 - have ships
 - place ships
 - select a square to hit
+
+it interacts with:
+- Ship
+- Board/Grid
