@@ -24,3 +24,12 @@ it should:
 it interacts with
 - Player
 - Board/Grid
+
+BOARD
+it should:
+- be made up of squares
+- know when a square is already occupied
+- know by what kind of ship it is occupied
+- keep track of hits and misses
+- not allow the same square to be hit twice
+
