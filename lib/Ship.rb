@@ -15,6 +15,11 @@ class Ship
 		@name = name
 	end
 
+	def hit!
+		@size = @size - 1
+	end
+
+
 
 end
 

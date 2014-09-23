@@ -33,18 +33,13 @@ describe Ship do
 		expect(patrol_boat.size).to be(2)
 	end
 
+	it "should diminish the size of the ship when hit" do
+		expect(battleship.size).to eq 4
+		battleship.hit!
+		expect(battleship.size).to eq 3
+	end
 
 
-	# it "should have maximum size of 5" do
-	# 	expect{ship = Ship.new(6)}.to raise_error("RuntimeError")
-	# end
-
-	# it "should have a minimun size of 2" do
-	# 	expect{ship = Ship.new(1)}.to raise_error("RuntimeError")
-	# end
-
-	# it "should have a different name in function of the size" do
-	# 	expect(ship.type(4)).to be :Battleship
-	# end
+	
 
 end
