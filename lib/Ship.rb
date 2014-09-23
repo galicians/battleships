@@ -42,7 +42,7 @@ class Destroyer < Ship
 	end
 end
 
-class PatrolBoat
+class PatrolBoat < Ship
 	def initialize
 		super(:patrol_boat)
 	end

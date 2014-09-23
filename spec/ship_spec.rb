@@ -18,23 +18,19 @@ describe Ship do
 	end
 
 	it "battleship should be size 4" do
-		expect(battleship.size).to be(5)
+		expect(battleship.size).to be(4)
 	end
 
 	it "destroyer should be size 3" do
-		expect(aircraft_carrier.size).to be(5)
+		expect(destroyer.size).to be(3)
 	end
 
-	it "submarine carrier should be size 2" do
-		expect(aircraft_carrier.size).to be(5)
+	it "submarine should be size 3" do
+		expect(submarine.size).to be(3)
 	end
 
-	it "submarine carrier should be size 2" do
-		expect(aircraft_carrier.size).to be(5)
-	end
-
-	it 'creates a patrol board' do
-		
+	it 'patrol board should be size 2' do
+		expect(patrol_boat.size).to be(2)
 	end
 
 
