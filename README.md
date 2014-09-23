@@ -33,3 +33,9 @@ it should:
 - keep track of hits and misses
 - not allow the same square to be hit twice
 
+PLAYER
+it should:
+- have a board
+- have ships
+- place ships
+- select a square to hit
