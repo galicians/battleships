@@ -1,14 +1,16 @@
-# class Game
+require 'grid'
 
-# 	def place_ships(location, ship)
-# 		change status of the squares
-# 		board.display
-# 	end
+class Game
+	def initialize
+	end
 
-# 	def player_targets[(1,1])
-# 	end
+def place_ship(ship,coordinates,grid)
+	puts "this is the formate of coordinates #{coordinates[0]}"
+	grid.grid[coordinates[0]] = '[S]'
+	puts "this should be the square [1,1]: #{grid.grid[coordinates[0]]}"
+	# # puts "just ensuring we can see grid from the game class #{@grid}"
+
+end
 
 
-
-
-# end
+end

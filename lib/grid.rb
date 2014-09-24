@@ -1,4 +1,4 @@
-
+require 'game'
 
 class Grid
 
