@@ -3,7 +3,9 @@ require 'game'
 class Grid
 
 	attr_accessor :grid
+	
 	A = [*1..10]
+	
 	def initialize
 		@grid = {}
 		
@@ -24,6 +26,7 @@ class Grid
 				puts "row#{x/10}" if x % 10 == 0 
 			end
 	end
+
 
 	# def place_ships(location, ship)
 	# 	change status of the squares
