@@ -39,7 +39,12 @@ describe Ship do
 		expect(battleship.size).to eq 3
 	end
 
+	it "should know when it is sunk" do
+		4.times {battleship.hit!}
+		expect(battleship.sunk?).to be true
+	end
 
+	
 	
 
 end
