@@ -25,4 +25,11 @@ class Grid
 			end
 	end
 
+	# def place_ships(location, ship)
+	# 	change status of the squares
+	# end
+
+	# def player_htting[(1,1])
+	# end
+
 end
