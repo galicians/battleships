@@ -18,4 +18,5 @@ describe Grid do
 		# expect(grid.grid.class).to eq("Square")
 	end
 
+
 end

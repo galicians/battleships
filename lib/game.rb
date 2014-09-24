@@ -1,14 +1,17 @@
-# class Game
+require './lib/grid.rb'
 
-# 	def place_ships(location, ship)
-# 		change status of the squares
-# 		board.display
-# 	end
+class Game
 
-# 	def player_targets[(1,1])
-# 	end
+	
+
+	def target(co1, co2, grid)
+
+		grid.grid[[co1, co2]] = "[O]"
+
+	end
 
 
 
 
-# end
+
+end
