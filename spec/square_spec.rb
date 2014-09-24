@@ -3,6 +3,7 @@ require 'square'
 describe Square do
 
 	let(:square) { Square.new }
+	
 	it 'it should be initialized as empty' do
 		expect(square.status.to_s).to eq("[ ]")
 	end
@@ -17,9 +18,9 @@ describe Square do
 			expect(square.ship!.status).to eq("[S]")
 		end
 
-		it "should change the status when a ship is hit" do
-			expect(square.ship!.hit!.status).to eq("[H]")
-		end
+		# it "should change the status when a ship is hit" do
+		# 	expect(square.ship!.hit!.status).to eq("[H]")
+		# end
 
 	end
 
