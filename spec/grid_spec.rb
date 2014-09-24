@@ -13,7 +13,7 @@ describe Grid do
 
 	it "should give me back a square" do
 		board = Grid.new
-		puts board.display
+		# puts board.display
 
 		# expect(grid.grid.class).to eq("Square")
 	end
