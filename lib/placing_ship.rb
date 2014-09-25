@@ -1,10 +1,11 @@
-require 'grid'
+class PlacingShip
 
-class Game
-	def initialize
-	end
+	
 
 	def place_ship(ship,coordinates,grid)
+		puts "inside the place ship method"
+		puts "this are the starting coordinates #{coordinates[0][0]}"
+		puts "this are the starting coordinates #{coordinates[1][1]}"
 		ships_horizontal(ship,coordinates,grid) if coordinates[0][0] == coordinates[1][0]
 		ships_vertical(ship,coordinates,grid) if coordinates[0][1] == coordinates[1][1]	
 	end
@@ -45,11 +46,6 @@ class Game
 	 		coordinates[0][1] += 1
 	 	end
 	 	puts "this is the ship location#{ship_location}"
-	end
-
-
-	def target(co1, co2, grid)
-		grid.grid[[co1, co2]] = "[O]"
 	end
 
 end
