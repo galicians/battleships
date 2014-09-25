@@ -5,47 +5,47 @@ class Game
 	end
 
 	def place_ship(ship,coordinates,grid)
+		ships_horizontal(ship,coordinates,grid) if coordinates[0][0] == coordinates[1][0]
+		ships_vertical(ship,coordinates,grid) if coordinates[0][1] == coordinates[1][1]	
+	end
 
-	
-	puts "this is our a: #{coordinates[0][0] + 1}"
-	puts "this is our b: #{coordinates[0][1]}"
 
-	 while (coordinates[0][0] <= coordinates[0][1])
-	 	# puts "inside our loop #{coordinates[0][0] + 1}"
-	 	while (coordinates[1][0] <= coordinates[1][1])
-		 	puts "#{coordinates[0][0]}  and #{coordinates[1][0]}"
-		 	grid.grid[[coordinates[0][0],coordinates[1][0]]] = '[S]'
-		 	coordinates[1][0] += 1
+	 def ships_horizontal(ship,coordinates,grid)
+	 	ship_location = []
+	 	until (coordinates[0][0] > coordinates[1][0])
+		 	until (coordinates[0][1] > coordinates[1][1])
+			 	grid.grid[[coordinates[1][0],coordinates[0][1]]] = '[S]'
+			 	ship_location << [coordinates[1][0],coordinates[0][1]]
+			 	coordinates[0][1] += 1
+		 	end
+	 		coordinates[0][0] += 1
 	 	end
-	 	coordinates[0][0] += 1
-	 end
-
-
-	 
-	 # puts "second loop"
-
-	 #  while (coordinates[1][0] <= coordinates[1][1])
-	 # 	puts "inside our loop #{coordinates[1][0]}"
-	 # 	coordinates[1][0] += 1
-
-	 # end
-
-
-	# while (coordinates[0][0] + 1 <= coordinates[0][1])
-
-	# 	puts "our coordinates is #{coordinates[0][0]} and #{coordinates[0][1]}"
-	# 	# grid.grid[coordinates[0][0] + 1,coordinates[0][1]] = '[S]'
-		
-	# 	puts "#{coordinates[0][1]}"
-	# end
+	 	puts "this is the ship location#{ship_location}"
+	 	return squares_empty?(ship_location,grid)  if  true #ship_location.size == ship.size
 
 	end
-	
-	# # grid.grid[coordinates[0]] = '[S]'
-	# # grid.grid[coordinates[1]] = '[S]'
-	
-	# # {grid.grid[coordinates[0]]}"
-	# # # puts "just ensuring we can see grid from the game class #{@grid}"
+
+	def squares_empty?(ship_location,grid)
+		ship_location.each do |square|
+			puts square.inspect
+			# puts grid.grid[square].status
+		end
+	end
+
+
+
+	def ships_vertical(ship,coordinates,grid)
+		ship_location = []
+	 	until (coordinates[0][1] > coordinates[1][1])
+		 	until(coordinates[0][0] > coordinates[1][0])
+			 	grid.grid[[coordinates[0][0],coordinates[1][1]]] = '[S]'
+			 	ship_location << [coordinates[0][0],coordinates[1][1]]
+			 	coordinates[0][0] += 1
+		 	end
+	 		coordinates[0][1] += 1
+	 	end
+	 	puts "this is the ship location#{ship_location}"
+	end
 
 
 	def target(co1, co2, grid)
