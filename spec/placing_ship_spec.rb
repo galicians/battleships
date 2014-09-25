@@ -1,4 +1,4 @@
-
+require 'game'
 require 'grid'
 require 'square'
 

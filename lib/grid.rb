@@ -1,4 +1,4 @@
-require 'game'
+require 'placing_ship'
 
 class Grid
 

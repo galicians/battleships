@@ -1,4 +1,4 @@
-class PlacingShip
+module PlacingShip
 
 	
 

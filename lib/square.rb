@@ -1,4 +1,5 @@
 class Square
+	
 	attr_accessor :status
 	
 	def initialize

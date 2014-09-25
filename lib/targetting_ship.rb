@@ -1,8 +1,6 @@
 require 'grid'
 
-class TargettingShip
-	def initialize
-	end
+module TargettingShip
 
 
 
